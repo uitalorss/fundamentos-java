@@ -163,3 +163,81 @@ public class ColecaoHashSet {
 }
 
 ```
+
+#### Programação orientada a objetos
+
+É um paradigma de programação que se baseia na ideia de organizar e modelar o software em torno de objetos.
+
+O que é um objeto?
+
+- É a representação de uma entidade do mundo real, por exemplo: Uma pessoa, um animal, um computador
+
+Os objetos são criados através de classes.
+
+- Todos eles possuem características, que aqui podemos chamar de atributos.
+- E todos possuem ações ou comportamentos, que são chamados de métodos.
+
+Programar usando esse paradigma é totalmente diferente de programar usando Javascript, por exemplo, pois para criar algo referente ao objeto é necessário instanciá-lo.
+
+O que é uma instância?
+
+- É uma nova representação do representação do objeto.
+- Exemplo: É como se, em uma fábrica de computadores, toda vez que alguém instanciasse o objeto computador e passasse os atributos pedidos, um novo computador fosse criado.
+
+Conceito de Pacotes
+
+Os pacotes são usados para agrupar classes relacionadas, assim é possível evitar conflitos de nomes entre classes.
+
+```
+public class Pessoa {
+    public String nome;
+    public int idade;
+    public String cpf;
+
+    void imprimirDados(){
+        System.out.println("nome: " + nome + "\nidade: " + idade + "\ncpf: " + cpf + ".");
+    }
+}
+
+```
+
+##### Encapsulamento
+
+O encapsulamento põe uma camada de segurança nos dados do objeto, pois impede que os dados sejam acessados direteamente pela instância do objeto.
+
+- Para acessar e manipular os dados, passa a ser preciso utilizar métodos(getters e setters).
+
+```
+package conta;
+
+public class ContaBancaria {
+    private String numero;
+    private String titular;
+    private double saldo;
+
+    public String getNumero(){
+        return numero;
+    }
+
+    public String getTitular(){
+        return titular;
+    }
+
+    public double getSaldo(){
+        return saldo;
+    }
+
+    public void setNumero(String numero){
+        this.numero = numero;
+    }
+
+    public void setTitular(String titular){
+        this.titular = titular;
+    }
+
+    public void setSaldo(double saldo){
+        this.saldo = saldo;
+    }
+}
+
+```
