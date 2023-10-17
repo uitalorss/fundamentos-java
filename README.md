@@ -75,3 +75,91 @@ public static void main(String[] args){
     boolean valor = true;
 
   ```
+
+#### Estrutura de dados
+
+##### Lista
+
+A lista
+
+```
+import java.util.ArrayList;
+import java.util.List;
+
+public class EstruturaDeDados {
+    public static void main(String[] args){
+        List<String> nomes = new ArrayList<>();
+        nomes.add("Uítalo");
+        nomes.add("Pietra");
+        nomes.add("Uirlan");
+
+
+        for(String nome: nomes){
+             System.out.println(nome);
+        }
+
+        // o forEach pode ser feito da forma abaixo também.
+        nomes.forEach(nome -> System.out.println("O nome é " + nome));
+    }
+}
+```
+
+##### HashMap
+
+Map = Coleção onde é possivel adicionar pares de chave/valor na estrutura.
+
+- Trabalha apenas com chaves únicas
+
+- Necessário informar qual o tipo da chave e qual o tipo do valor.
+- Necessário também informar uma classe que ele possa gerenciar ao invés do tipo, pois o Map não aceita tipos primitivos (com exceção do String, em que já é usada uma classe).
+
+```
+public class Colecoes {
+    public static void main(String[] args) {
+        Map<String, Integer> notas = new HashMap<>();
+        notas.put("Uítalo", 8);
+        notas.put("Uitana", 9);
+        notas.put("Uirlan", 10);
+
+        for(Map.Entry<String, Integer> entry : notas.entrySet()){
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+
+            System.out.println("A chave é " + key + " e o valor é " + value);
+        }
+
+        System.out.println(notas.get("Uítalo"));
+    }
+}
+
+```
+
+##### HashSet
+
+Set = Coleçao de elementos únicos
+
+- Não é possível pegar um elemento pelo indice pois o hashSet não foi feito para isso. A ordenação não importa aqui.
+
+```
+import java.util.HashSet;
+import java.util.Set;
+
+public class ColecaoHashSet {
+    public static void main(String[] args) {
+        Set<Integer> numeros = new HashSet<>();
+
+        numeros.add(9);
+        numeros.add(3);
+        numeros.add(0);
+
+        System.out.println(numeros);
+
+        for (Integer elemento : numeros){
+            System.out.println(elemento);
+        }
+
+        System.out.println(numeros.contains(3));
+    }
+}
+
+```
